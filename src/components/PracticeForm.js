@@ -2,6 +2,12 @@ import React from "react";
 import Form from "./Form";
 import { SubmissionError } from "redux-form"
 
+const data = {
+    firstName: "Nathaniel",
+    lastName: "Payne",
+    email: "nathaniel@payne.org",
+}
+
 const PracticeForm = () => {
     const submit = ({ firstName = "", lastName = "", email = "" }) => {
         let error = {};
@@ -35,7 +41,7 @@ const PracticeForm = () => {
     }
 
     return (
-        <Form onSubmit={submit} />
+        <Form onSubmit={submit} data={data} />
     )
 }
 

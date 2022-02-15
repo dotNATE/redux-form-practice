@@ -10,3 +10,10 @@ export const decrement = () => {
         type: "DECREMENT"
     })
 }
+
+export const load = data => {
+    return ({
+        type: "LOAD",
+        payload: data,
+    })
+}
